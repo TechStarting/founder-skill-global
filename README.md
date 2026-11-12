@@ -1,28 +1,61 @@
-# The Founder skill
+# The Founder skill: country edition
 
-Eleven Claude skills that test a business before you launch it. Free, MIT, no
-signup, no API key, nothing to connect.
+Twelve Claude skills that test a business before you launch it, using the rules
+of the country you are launching in. Malaysia first. Free, MIT, no signup, no
+API key, nothing to connect.
 
-`skills/founder-board` `skills/founder-marketing` `skills/founder-cfo`
-`skills/founder-consumer` `skills/founder-launch` `skills/founder-pricing`
-`skills/founder-offer` `skills/founder-competitors` `skills/founder-brand`
-`skills/founder-ops` `skills/founder-plan`
+`skills/founder-locale` `skills/founder-board` `skills/founder-marketing`
+`skills/founder-cfo` `skills/founder-consumer` `skills/founder-launch`
+`skills/founder-pricing` `skills/founder-offer` `skills/founder-competitors`
+`skills/founder-brand` `skills/founder-ops` `skills/founder-plan`
 
-One of them is your board of directors, trained on the frameworks of Alex
-Hormozi, Peter Thiel and Steve Jobs. One is your marketing director. One is your
-CFO and finds your real profit margins. And one is the consumer panel: it spins
-up 100 buyer agents trained on your target customer and runs your business
-through 100 buyer scenarios.
+This is a fork of [The Founder skill](https://github.com/Jakeschincariol/founder-skill)
+by Jake Schincariol, maintained by TechStart. The method, the tools and most of
+the words are his. This edition adds the country layer.
+
+One skill is your board of directors, applying frameworks summarised from books
+by and about Alex Hormozi, Peter Thiel and Steve Jobs. One is your marketing
+director. One is your CFO and finds your real profit margins. One is the
+consumer panel: it deals simulated buyers from your target customer and tallies
+who buys, who passes and why. And one sets the country, so the other eleven work
+in your currency, with your tax and payroll rules, your trademark registry and
+the apps your customers actually use.
 
 So you know how to launch, how to market and how to actually make money, before
-you spend thousands of dollars finding out the hard way.
+you spend thousands finding out the hard way.
+
+## What this edition adds
+
+A plan written with North American defaults breaks in small ways everywhere
+else: prices in dollars, a trademark check against the wrong registry, payroll
+without the statutory contributions, a marketing plan that ignores WhatsApp.
+
+- **`/founder-locale`** loads a country pack and writes `founder/locale.md`.
+  Every other skill reads that file first.
+- **Country packs** live in `skills/founder-locale/packs/`, one file per
+  country. Each is dated, links official sources, and marks the figures that
+  change often. The skill re-checks those figures when it runs.
+- **Malaysia (`MY`)** is the first pack: ringgit, SSM registration, service tax,
+  e-invoicing, EPF and SOCSO, local council licences, MyIPO, DuitNow QR and
+  e-wallets, the channels buyers use and the festival calendar.
+- **No pack for your country?** The skill builds a locale from official sources
+  with the template and marks it unreviewed.
+
+Packs are a checklist of what to confirm, not legal, tax or financial advice.
+
+### Add your country
+
+Copy `skills/founder-locale/packs/TEMPLATE.md` to `packs/<ISO code>.md`, fill it
+from official sources, date it and open a pull request. Packs from people who
+have registered and run a business in that country are the ones worth having.
+Next on the list: Singapore, Indonesia, Thailand, Vietnam and the Philippines.
 
 ## Install
 
 Paste this repo link into Claude and say `install skill`:
 
 ```
-https://github.com/Jakeschincariol/founder-skill
+https://github.com/TechStarting/founder-skill-global
 
 install skill
 ```
@@ -30,7 +63,7 @@ install skill
 Or as a plugin, in Claude Code:
 
 ```
-/plugin marketplace add Jakeschincariol/founder-skill
+/plugin marketplace add TechStarting/founder-skill-global
 /plugin install founder-skill@founder-skill
 ```
 
@@ -39,8 +72,8 @@ Claude Code namespaces plugin skills, so installed as a plugin they show up as
 plain `/founder-board`:
 
 ```bash
-git clone https://github.com/Jakeschincariol/founder-skill.git
-cp -r founder-skill/skills/founder-* ~/.claude/skills/
+git clone https://github.com/TechStarting/founder-skill-global.git
+cp -r founder-skill-global/skills/founder-* ~/.claude/skills/
 ```
 
 Project-local instead of global: copy the same folders into your repo's
@@ -50,10 +83,11 @@ but the method works.
 
 The tools need Python 3.8 or newer. Nothing to pip install.
 
-## The eleven
+## The twelve
 
 | command | job | what it does |
 | --- | --- | --- |
+| `/founder-locale` | Country | Loads the country pack, re-checks the figures that change against official sources, and writes the local currency, tax, payroll, licence, trademark, payment and channel facts every other skill uses. |
 | `/founder-board` | Board of Directors | Three board members, each a sub-agent applying one published framework (Offers, from *$100M Offers*; Monopoly, from *Zero to One*; Product, from Isaacson's *Steve Jobs*), score the idea, name what would kill it and vote. |
 | `/founder-competitors` | Competitor Scout | Maps direct competitors, indirect ones and substitutes from public sources, with prices, positioning and what their customers complain about, every fact linked. |
 | `/founder-consumer` | Consumer Panel | Spins up a swarm of buyer agents (100 by default) from your target customer, each with its own income, habits and objection, and tallies who buys, who doesn't and why. |
@@ -72,7 +106,7 @@ Run them in this order. Each one reads what the others wrote, in a `founder/`
 folder in your project.
 
 ```
-board -> competitors -> consumer -> pricing -> offer -> cfo -> marketing -> brand -> ops -> launch -> plan
+locale -> board -> competitors -> consumer -> pricing -> offer -> cfo -> marketing -> brand -> ops -> launch -> plan
 ```
 
 An example: a matcha café in Toronto, iced matcha lattes at $6.50 a cup. (Every
@@ -166,6 +200,7 @@ confirms it.
 ## Files
 
 ```
+skills/founder-locale/       SKILL.md, packs/MY.md, packs/TEMPLATE.md
 skills/founder-board/        SKILL.md, lenses.md
 skills/founder-competitors/  SKILL.md
 skills/founder-consumer/     SKILL.md, panel.py, customer.example.json, pitch.example.md
@@ -184,7 +219,9 @@ Your own files live in `founder/` in your project. The skills read each other's.
 
 ## Credit
 
-Made by Jake Schincariol, [opusjake.ai](https://opusjake.ai). Siblings:
+The Founder skill was made by Jake Schincariol, [opusjake.ai](https://opusjake.ai).
+The country edition, `founder-locale` and the country packs are by TechStart.
+Jake's other skills:
 [Arena](https://github.com/Jakeschincariol/arena-skill),
 [Replica](https://github.com/Jakeschincariol/replica-skill),
 [X](https://github.com/Jakeschincariol/x-agent-skill),

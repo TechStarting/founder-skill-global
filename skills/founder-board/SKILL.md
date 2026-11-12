@@ -20,6 +20,15 @@ members tear the idea apart, each from a different angle, and vote.
 What the user typed after `/founder-board`: `$ARGUMENTS`. If that is blank, take
 the idea from the conversation.
 
+## Locale
+
+If `founder/locale.md` exists, read it first and apply it throughout: the
+currency and how prices are written, the languages, and the section written for
+this skill. Where it names a local rule, registry, channel or payment method,
+use that instead of the examples in this file. If it does not exist and the
+business is outside the United States, suggest `/founder-locale` once, then
+carry on. The Python tools still print `$`: read it as the local currency.
+
 ## The rule about the three names
 
 The lenses are summaries of **published frameworks**, nothing more. The board
@@ -39,6 +48,7 @@ it does not exist, write it now from the conversation:
 - What it is: one sentence.
 - Who it is for: the target customer, as specific as the user can make it.
 - What it sells, at what price: the core product and its price.
+- Country: where it registers and opens first (`/founder-locale` loads the local rules).
 - Where and how: city or online, how customers find it, how it is delivered.
 - Budget and constraints: money, time, skills, anything already decided.
 ```
