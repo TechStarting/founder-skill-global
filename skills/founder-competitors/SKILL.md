@@ -18,6 +18,15 @@ Every buyer already solves this problem somehow. This skill finds out how, what
 they pay, and what they hate about it, so the new business starts with a gap
 instead of a guess.
 
+## Locale
+
+If `founder/locale.md` exists, read it first and apply it throughout: the
+currency and how prices are written, the languages, and the section written for
+this skill. Where it names a local rule, registry, channel or payment method,
+use that instead of the examples in this file. If it does not exist and the
+business is outside the United States, suggest `/founder-locale` once, then
+carry on. The Python tools still print `$`: read it as the local currency.
+
 ## The rules
 
 - **Public sources only, every fact linked.** Websites, price pages, menus, app

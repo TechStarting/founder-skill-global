@@ -15,6 +15,15 @@ argument-hint: "[name ideas, if any]"
 A brand is the promise a customer remembers. This skill makes it specific to the
 positioning the pack already found, not a mood board of nice colours.
 
+## Locale
+
+If `founder/locale.md` exists, read it first and apply it throughout: the
+currency and how prices are written, the languages, and the section written for
+this skill. Where it names a local rule, registry, channel or payment method,
+use that instead of the examples in this file. If it does not exist and the
+business is outside the United States, suggest `/founder-locale` once, then
+carry on. The Python tools still print `$`: read it as the local currency.
+
 ## Step 1: read the brief
 
 `founder/idea.md`, `founder/marketing.md` (the positioning line and the first

@@ -19,6 +19,15 @@ everything that makes buying it an easy yes. This skill builds that, using the
 Offers lens in `../founder-board/lenses.md` as the method (a summary of the
 framework in Alex Hormozi's *$100M Offers*; never present it as his words).
 
+## Locale
+
+If `founder/locale.md` exists, read it first and apply it throughout: the
+currency and how prices are written, the languages, and the section written for
+this skill. Where it names a local rule, registry, channel or payment method,
+use that instead of the examples in this file. If it does not exist and the
+business is outside the United States, suggest `/founder-locale` once, then
+carry on. The Python tools still print `$`: read it as the local currency.
+
 ## Step 1: read what is already known
 
 - `founder/idea.md` and `founder/pitch.md`: what is sold today.

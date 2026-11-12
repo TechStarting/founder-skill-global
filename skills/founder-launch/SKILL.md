@@ -16,6 +16,15 @@ Launching is a project with a date. This skill turns everything else in the pack
 into a dated plan, and starts with the cheapest way to find out if real people
 will pay before the big money goes out.
 
+## Locale
+
+If `founder/locale.md` exists, read it first and apply it throughout: the
+currency and how prices are written, the languages, and the section written for
+this skill. Where it names a local rule, registry, channel or payment method,
+use that instead of the examples in this file. If it does not exist and the
+business is outside the United States, suggest `/founder-locale` once, then
+carry on. The Python tools still print `$`: read it as the local currency.
+
 ## Step 1: test before you spend
 
 Pick the cheapest real test that fits the business, and run it before signing the

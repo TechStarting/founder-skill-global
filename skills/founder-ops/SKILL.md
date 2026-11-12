@@ -17,6 +17,15 @@ A plan that works on paper fails at 7am on a Monday. This skill makes sure the
 first day, week and month can actually be run, and that the CFO's numbers include
 what running it really costs.
 
+## Locale
+
+If `founder/locale.md` exists, read it first and apply it throughout: the
+currency and how prices are written, the languages, and the section written for
+this skill. Where it names a local rule, registry, channel or payment method,
+use that instead of the examples in this file. If it does not exist and the
+business is outside the United States, suggest `/founder-locale` once, then
+carry on. The Python tools still print `$`: read it as the local currency.
+
 ## Step 1: what the business has to do every day
 
 From `founder/idea.md`, `founder/offer.md` and `founder/numbers.json`, write the
