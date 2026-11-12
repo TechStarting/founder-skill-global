@@ -15,9 +15,40 @@ advice.
   publishes in from who the first customers are, and say so in the idea file.
 - **Income is quoted per month**, not per year. Describe panel segments by
   monthly household or personal income.
-- **Statistics**: the Department of Statistics Malaysia (DOSM) publishes
-  household income by state and district. Use it for income bands instead of
-  guessing.
+- **Statistics**: use the government's open data instead of guessing. See
+  "Open data" below for which dataset answers which question.
+
+## Open data
+
+Malaysia publishes official statistics as open data. Use these before any
+estimate, link the dataset, and record its "data as of" date, because some
+series are years old.
+
+- **OpenDOSM**, https://open.dosm.gov.my : the Department of Statistics
+  Malaysia's portal, with dashboards, publications and a data catalogue at
+  https://open.dosm.gov.my/data-catalogue
+- **data.gov.my**, https://data.gov.my : the government's official open data
+  portal, which also carries data from other agencies (for example vehicle
+  registrations, household debt and fuel prices).
+- **API**: documented at https://developer.data.gov.my for both portals.
+
+| question | dataset to look for in the catalogue | used by |
+| --- | --- | --- |
+| How much do households here earn and spend? | Household income and expenditure by state and administrative district; household income by percentile | consumer panel, pricing |
+| How many people live here, and of what ages? | Population by state and by administrative district, by sex, age group and ethnicity | board, consumer panel |
+| What do people in this trade get paid? | Salaries and wages by state, industry and occupation; formal sector wages | CFO, operations |
+| What does this item cost in shops nearby? | PriceCatcher item prices by premise; consumer price index by state | competitors, pricing, CFO |
+| Is spending in this sector growing? | Wholesale and retail trade; services indices; GDP by state | board, CFO |
+| How tight is the local labour market? | Labour force statistics by state and district | operations |
+
+Notes:
+
+- District-level series are not all current. Check the date on each one.
+- The catalogue pages did not show a named data licence when this pack was
+  written. Confirm the terms of use on the dataset page before republishing
+  data or building a paid product on it.
+- These are averages for an area. They size a market and set panel income
+  bands. They do not say whether a particular street has customers.
 
 ## For the board and the idea
 
@@ -165,7 +196,8 @@ Checked on 2026-11-12 unless noted. Open the official site for the current rule.
 | Personal data protection | Personal Data Protection Commissioner, https://www.pdp.gov.my |
 | Halal certification | JAKIM halal portal, https://www.halal.gov.my |
 | Payments and financial regulation | Bank Negara Malaysia, https://www.bnm.gov.my |
-| Income and population statistics | Department of Statistics Malaysia, https://www.dosm.gov.my |
+| Income, population, wages and prices | OpenDOSM, https://open.dosm.gov.my and its catalogue, https://open.dosm.gov.my/data-catalogue |
+| Open data from all agencies, and the API | data.gov.my, https://data.gov.my and https://developer.data.gov.my |
 
 The figures in this pack were cross-checked against published summaries on the
 date above, not against the primary legal text. The skill re-checks them at run
